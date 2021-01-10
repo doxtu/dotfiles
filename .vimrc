@@ -34,3 +34,5 @@ set foldlevelstart=10
 set foldmethod=indent
 nnoremap <space> za
 
+"Set window split to open new file on right
+set splitright
