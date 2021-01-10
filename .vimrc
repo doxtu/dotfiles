@@ -5,13 +5,13 @@ syntax on
 inoremap jk <ESC>
 
 "Sets visible size of tabs in spaces
-set tabstop=4
+set tabstop=2
 
 "How much whitespace removed from backspace and how much added by tab in spaces.
-set softtabstop=4
+set softtabstop=2
 
 "Sets the size of an indentation
-set shiftwidth=4
+set shiftwidth=2
 
 "When tab is pressed in insert mode, add spaces instead of tab
 set expandtab
