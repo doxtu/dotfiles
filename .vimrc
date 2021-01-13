@@ -1,3 +1,5 @@
+source $VIMRUNTIME/defaults.vim
+
 "Syntax highlighting
 syntax on
 
@@ -23,7 +25,7 @@ set ai
 set number
 
 "Load the indentation scheme based on filetype
-filetype indent on
+filetype indent plugin on
 
 "Show matching brackets in files
 set showmatch
@@ -36,3 +38,16 @@ nnoremap <space> za
 
 "Set window split to open new file on right
 set splitright
+
+"Allows :find search into subdirectories, ignores stupid node_modules
+set path+=**
+set wildignore+=**/node_modules/**
+
+"Ignore case in search
+set ignorecase
+
+"highlight while searching
+set incsearch
+
+"packages
+packadd! matchit
