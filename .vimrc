@@ -1,53 +1,60 @@
 source $VIMRUNTIME/defaults.vim
 
-"Syntax highlighting
-syntax on
-
-"Remap j and k to escape
-inoremap jk <ESC>
-
-"Sets visible size of tabs in spaces
+"GENERAL EDITING
+set history=500
+let mapleader=','
+noremap <leader>w :w<cr>
 set tabstop=2
-
-"How much whitespace removed from backspace and how much added by tab in spaces.
 set softtabstop=2
-
-"Sets the size of an indentation
 set shiftwidth=2
-
-"When tab is pressed in insert mode, add spaces instead of tab
 set expandtab
-
-"Auto indent on new line
+set smarttab
 set ai
-
-"display line number
+set si
 set number
-
-"Load the indentation scheme based on filetype
+syntax on
+inoremap jk <ESC>
 filetype indent plugin on
-
-"Show matching brackets in files
 set showmatch
-
-"Enable text folding for large block
 set foldenable
 set foldlevelstart=10
 set foldmethod=indent
 nnoremap <space> za
+set ruler
+set hid
 
-"Set window split to open new file on right
+"FILES AND WINDOW 
 set splitright
-
-"Allows :find search into subdirectories, ignores stupid node_modules
-set path+=**
+"set path+=**
 set wildignore+=**/node_modules/**
+set autoread
+set wildmenu
+set nobackup
+set nowb
+set noswapfile
 
-"Ignore case in search
-set ignorecase
-
-"highlight while searching
+"SEARCH
 set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
-"packages
-packadd! matchit
+"PLUGINS
+call plug#begin()
+
+"JS/React Plugins
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+
+call plug#end()
+
+"PLUGIN OPTIONS
+autocmd BufWritePre *.js,*.jsx,*.json,*.html,*.css,*.sql PrettierAsync
