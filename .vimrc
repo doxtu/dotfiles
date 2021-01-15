@@ -43,6 +43,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+"COMMAND HOTKEYS
+noremap <leader>p :!git add -A && git commit -m "update notes" && git push origin main<cr>
+
 "PLUGINS
 call plug#begin()
 
@@ -58,3 +61,4 @@ call plug#end()
 
 "PLUGIN OPTIONS
 autocmd BufWritePre *.js,*.jsx,*.json,*.html,*.css,*.sql PrettierAsync
+noremap <leader>f :FZF<Enter>
