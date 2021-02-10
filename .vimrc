@@ -61,4 +61,5 @@ call plug#end()
 
 "PLUGIN OPTIONS
 autocmd BufWritePre *.js,*.jsx,*.json,*.html,*.css,*.sql PrettierAsync
+noremap <leader>w :PrettierAsync<Enter>:w
 noremap <leader>f :FZF<Enter>
