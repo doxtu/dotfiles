@@ -60,8 +60,6 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 call plug#end()
 
 "PLUGIN OPTIONS
-<<<<<<< HEAD
 "autocmd BufWritePre *.js,*.jsx,*.json,*.html,*.css,*.sql PrettierAsync
 noremap <leader>w :PrettierAsync<Enter>:w
 noremap <leader>f :FZF<Enter>
->>>>>>> 76dff88ff5a295157746a9d788dd7ce9bf3c7a1b
