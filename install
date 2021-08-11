@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script inserts symlinks in dotfile locations to this version controlled directory
+# Thus changes will instantly reflect across all systems that share this folder
+DOTFILE_LOCATION=$(find / -type d -iname dotfiles 2> /dev/null | head -n 1)
+
+# INSTALL BASHRC AS SYMLINK
+if [ -e "$HOME/.bashrc" ] ; then rm "$HOME/.bashrc" ; fi
+ln -s "$DOTFILE_LOCATION/.bashrc" "$HOME/.bashrc"
+echo 'bashrc done'
+
+# INSTALL VIMRC AS SYMLINK
+if [ -e "$HOME/.vimrc" ] ; then rm "$HOME/.vimrc" ; fi
+ln -s "$DOTFILE_LOCATION/.vimrc" "$HOME/.vimrc"
+echo 'vimrc done'

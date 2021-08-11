@@ -46,6 +46,10 @@ set tm=500
 "COMMAND HOTKEYS
 noremap <leader>p :!git add -A && git commit -m "update notes" && git push origin main<cr>
 
+"TMUX COMPATIBILITY
+set background=dark
+set t_Co=256
+
 "PLUGINS
 call plug#begin()
 
