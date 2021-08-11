@@ -6,6 +6,7 @@ DOTFILE_LOCATION=$(find / -type d -iname dotfiles 2> /dev/null | head -n 1)
 # INSTALL BASHRC AS SYMLINK
 if [ -e "$HOME/.bashrc" ] ; then rm "$HOME/.bashrc" ; fi
 ln -s "$DOTFILE_LOCATION/.bashrc" "$HOME/.bashrc"
+ln -s "$DOTFILE_LOCATION/.colors" "$HOME/.colors"
 echo 'bashrc done'
 
 # INSTALL VIMRC AS SYMLINK
