@@ -13,3 +13,8 @@ echo 'bashrc done'
 if [ -e "$HOME/.vimrc" ] ; then rm "$HOME/.vimrc" ; fi
 ln -s "$DOTFILE_LOCATION/.vimrc" "$HOME/.vimrc"
 echo 'vimrc done'
+
+# INSTALL TMUX AS SYMLINK
+if [ -e "$HOME/.tmux.conf" ] ; then rm "$HOME/.tmux.conf" ; fi
+ln -s "$DOTFILE_LOCATION/.tmux.conf" "$HOME/.tmux.conf"
+echo 'tmux done'
