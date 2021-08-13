@@ -49,3 +49,7 @@ gitcp () {
   git commit -m "$1"
   git push
 }
+
+# stop terminal freeze with ctrl + s
+stty -ixon
+stty stop undef
