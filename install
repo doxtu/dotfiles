@@ -25,3 +25,5 @@ mkdir -p ~/.vim/pack/nickg/start
 git clone https://github.com/prettier/vim-prettier ~/.vim/pack/nickg/start/vim-prettier
 # FZF
 git clone https://github.com/junegunn/fzf ~/.vim/pack/nickg/start/fzf
+# VIM-COMMENTARY
+git clone https://tpope.io/vim/commentary.git ~/.vim/pack/nickg/start/vim-commentary
