@@ -18,3 +18,10 @@ echo 'vimrc done'
 if [ -e "$HOME/.tmux.conf" ] ; then rm "$HOME/.tmux.conf" ; fi
 ln -s "$DOTFILE_LOCATION/.tmux.conf" "$HOME/.tmux.conf"
 echo 'tmux done'
+
+# INSTALL VIM PLUGINS
+mkdir -p ~/.vim/pack/nickg/start
+# PRETTIER
+git clone https://github.com/prettier/vim-prettier ~/.vim/pack/nickg/start/vim-prettier
+# FZF
+git clone https://github.com/junegunn/fzf ~/.vim/pack/nickg/start/fzf

@@ -50,18 +50,21 @@ noremap <leader>p :!git add -A && git commit -m "update notes" && git push origi
 set background=dark
 set t_Co=256
 
-"PLUGINS
-call plug#begin()
+"PLUGINS - installed directly from source into - TODO automate
+"~/.vim/pack/nickg/start/plugin/packname/pack.vim
+"LIST - fzf, vim-prettier, vim-commentary
+set rtp+=/usr/bin 
+"call plug#begin()
 
 "JS/React Plugins
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-commentary'
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
+"Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"Plug 'tpope/vim-commentary'
+"Plug 'pangloss/vim-javascript'
+"Plug 'MaxMEllon/vim-jsx-pretty'
 
-call plug#end()
+"call plug#end()
 
 "PLUGIN OPTIONS
 "autocmd BufWritePre *.js,*.jsx,*.json,*.html,*.css,*.sql PrettierAsync
