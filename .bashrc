@@ -17,7 +17,7 @@ shopt -s nocaseglob
 alias cp="cp -i"
 alias df='df -h'
 alias free='free -m'
-alias ls="ls -la"
+alias ls="ls -la --color=auto"
 
 # terminal display
 PS1="${bold_green}\u ${bold_purple}\W${normal} => ${reset}"
