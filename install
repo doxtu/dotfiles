@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# dotfiles are config files for common programs
 # This script inserts symlinks in dotfile locations to this version controlled directory
 # Thus changes will instantly reflect across all systems that share this folder
 DOTFILE_LOCATION=$(find / -type d -iname dotfiles 2> /dev/null | head -n 1)
@@ -9,7 +10,7 @@ ln -s "$DOTFILE_LOCATION/.bashrc" "$HOME/.bashrc"
 ln -s "$DOTFILE_LOCATION/.colors" "$HOME/.colors"
 echo 'bashrc done'
 
-# INSTALL VIMRC AS SYMLINK
+# INSTALL VIMRC AS SYMLINK -- deprecate in favor of micro
 if [ -e "$HOME/.vimrc" ] ; then rm "$HOME/.vimrc" ; fi
 ln -s "$DOTFILE_LOCATION/.vimrc" "$HOME/.vimrc"
 echo 'vimrc done'
@@ -18,6 +19,11 @@ echo 'vimrc done'
 if [ -e "$HOME/.tmux.conf" ] ; then rm "$HOME/.tmux.conf" ; fi
 ln -s "$DOTFILE_LOCATION/.tmux.conf" "$HOME/.tmux.conf"
 echo 'tmux done'
+
+# INSTALL MICRO SETTINGS AS SYMLINK
+if [ -e "$HOME/.config/micro/settings.json" ] ; then rm "$HOME/.config/micro/settings.json"; fi
+ln -s "$DOTFILE_LOCATION/micro-settings.json" "$HOME/.config/micro/settings.json"
+echo 'micro done'
 
 # INSTALL VIM PLUGINS
 mkdir -p ~/.vim/pack/nickg/start
