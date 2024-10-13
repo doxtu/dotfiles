@@ -26,10 +26,10 @@ ln -s "$DOTFILE_LOCATION/micro-settings.json" "$HOME/.config/micro/settings.json
 echo 'micro done'
 
 # INSTALL VIM PLUGINS
-mkdir -p ~/.vim/pack/nickg/start
+mkdir -p ~/.vim/pack/doxtu/start
 # PRETTIER
-git clone https://github.com/prettier/vim-prettier ~/.vim/pack/nickg/start/vim-prettier
+git clone https://github.com/prettier/vim-prettier ~/.vim/pack/doxtu/start/vim-prettier
 # FZF
-git clone https://github.com/junegunn/fzf ~/.vim/pack/nickg/start/fzf
+git clone https://github.com/junegunn/fzf ~/.vim/pack/doxtu/start/fzf
 # VIM-COMMENTARY
-git clone https://tpope.io/vim/commentary.git ~/.vim/pack/nickg/start/vim-commentary
+git clone https://tpope.io/vim/commentary.git ~/.vim/pack/doxtu/start/vim-commentary
